@@ -22,4 +22,4 @@ jobs:
     - name: Install Dependencies
       run: npm ci
     - name: Run app
-      run: npm run devTool
+      run: npm run devStart
