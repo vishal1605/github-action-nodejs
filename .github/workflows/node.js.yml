@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - main
-      - test
+      - 'dev-*'
 
 jobs:
   test:
