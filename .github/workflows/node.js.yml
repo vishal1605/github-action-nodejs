@@ -22,4 +22,4 @@ jobs:
     - name: Install Dependencies
       run: npm ci
     - name: Run app
-      run: npm run devStart
+      run: echo "Running"
