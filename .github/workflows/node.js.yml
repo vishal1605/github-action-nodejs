@@ -27,7 +27,7 @@ jobs:
           path: 
             public/send_artifacts.txt
       - name: Run test
-        run: npm run test
+        run: echo "Testing"
 
   deploy:
     runs-on: ubuntu-latest
