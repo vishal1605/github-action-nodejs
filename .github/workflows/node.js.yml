@@ -19,5 +19,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 18
-    - run: npm ci
-    - run: pm2 restart server.js
+    - name: Install Dependencies
+      run: npm ci
+    - name: Run app
+      run: npm run devTool
