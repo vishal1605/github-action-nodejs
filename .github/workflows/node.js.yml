@@ -47,6 +47,6 @@ jobs:
         with:
           name: my-file
       - name: See output file
-        run: ls
+        run: ls -R
       - name: Run app
         run: echo "Running"
