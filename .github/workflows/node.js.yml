@@ -5,21 +5,35 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Get the code in remote server
-      uses: actions/checkout@v3
-    - name: Action to install nodejs or specify you are using nodejs
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
-    - name: Install Dependencies
-      run: npm ci
-    - name: Run app
-      run: echo "Running"
+      - name: Get the code in remote server
+        uses: actions/checkout@v3
+      - name: Action to install nodejs or specify you are using nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run test
+        run: echo "Testing"
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get the code in remote server
+        uses: actions/checkout@v3
+      - name: Action to install nodejs or specify you are using nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run app
+        run: echo "Running"
